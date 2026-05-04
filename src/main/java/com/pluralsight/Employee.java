@@ -17,4 +17,40 @@ public class Employee {
     }
 
 
+    int getEmployeeId() {
+        return this.employeeId;
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+    String getDepartment() {
+        return this.department;
+    }
+
+    double getPayRate() {
+        return this.payRate;
+    }
+
+    double getHoursWorked() {
+        return this.hoursWorked;
+    }
+    double getRegularHours(){
+        if (hoursWorked >= 40){
+            return 40;
+        }
+        return hoursWorked;
+    }
+    double getOvertimeHours(){
+        if (hoursWorked > 40){
+            return hoursWorked - 40;
+        }
+        return 0;
+    }
+    double getTotalPay(){
+        return (getRegularHours() * payRate + (getOvertimeHours() * (payRate * 1.5)));
+    }
+
+
 }

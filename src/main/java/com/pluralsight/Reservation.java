@@ -25,8 +25,10 @@ public class Reservation {
             return 139.00;
         else if (this.roomType.equalsIgnoreCase("double")) {
             return 124.00;
+        }else{
+            return 0;
         }
-        return this.price;
+
     }
     int getNumberOfNights(){
         return this.numberOfNights;
