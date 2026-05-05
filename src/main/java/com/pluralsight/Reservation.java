@@ -1,16 +1,17 @@
 package com.pluralsight;
 
 public class Reservation {
-    String roomType;
-    double price;
-    int numberOfNights;
-    boolean weekend;
+    private String roomType;
+    private double price;
+    private int numberOfNights;
+    private boolean weekend;
 
     public Reservation(String roomType, double price, int numberOfNights, boolean weekend) {
         this.roomType = roomType;
         this.price = price;
         this.numberOfNights = numberOfNights;
         this.weekend = weekend;
+
     }
 
     String getRoomType(){
